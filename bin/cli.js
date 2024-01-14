@@ -6,4 +6,14 @@ import require from "./utils/useRequire.js";
 // require的路径值应当相对于useRequire.js文件的路径进行填写
 program.name("tsw").version(`v${require("../../package.json").version}`); // 配置动态版本号
 
+// tsw create-vue
+program
+  .command("create-vue")
+  .argument("[project-name]", "optional project name")
+  .description("create a vue project")
+  .option("-f, --force", "force to overwrite target directory if it exists")
+  .action((projectName, options) => {
+    console.log(projectName, options);
+  });
+
 program.parse(process.argv);
