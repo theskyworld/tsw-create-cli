@@ -12,8 +12,9 @@ program
   .argument("[project-name]", "optional project name")
   .description("create a vue project")
   .option("-f, --force", "force to overwrite target directory if it exists")
-  .action((projectName, options) => {
-    console.log(projectName, options);
+  .action(async (projectName, options) => {
+    const createProject = (await import("../lib/createProject.js")).default;
+    createProject(projectName, options);
   });
 
 program.parse(process.argv);
