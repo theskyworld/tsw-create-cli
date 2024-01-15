@@ -1,18 +1,31 @@
 {
   "name": "tsw-create-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "type": "module",
   "bin": {
     "tsw": "bin/cli.js"
   },
+  "files": [
+    "bin",
+    "lib"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "tsw-create-cli",
+    "tsw",
+    "cli",
+    "vue",
+    "react"
+  ],
+  "author": {
+    "name": "the sky world",
+    "email": "tswalice1357@proton.me"
+  },
   "license": "ISC",
   "devDependencies": {
     "@inquirer/input": "^1.2.14",
